@@ -2,14 +2,13 @@
   "name": "contact_sales_form",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "dev-node": "tsx watch src/server",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && tsc -p tsconfig.server.json",
+    "start": "node dist/server/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "start": "tsx src/server"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
