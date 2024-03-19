@@ -6,4 +6,5 @@ const app = express();
 
 app.use(api);
 
+app.use(express.static(process.cwd() + "/dist"));
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
