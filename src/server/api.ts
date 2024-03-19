@@ -6,6 +6,6 @@ import "dotenv/config";
 export const api = remultExpress({
   entities: [Task],
   dataProvider: createPostgresConnection({
-    connectionString: process.env["DB_CONNECTION_STRING"],
+    connectionString: process.env["DB_CONNECTION_STRING"] || "",
   }),
 });
