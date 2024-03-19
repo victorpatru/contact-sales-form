@@ -11,9 +11,9 @@ app.use(helmet());
 app.use(compression());
 app.use(api);
 
+app.use(express.static(path.join(__dirname, "../")));
 app.get("/*", (_, res) => {
   res.sendFile(path.join(__dirname, "../", "index.html"));
 });
 
-app.use(express.static(process.cwd() + "/dist"));
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
